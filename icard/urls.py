@@ -27,6 +27,7 @@ from categories.api.router import router_category
 from products.api.router import router_product
 from tables.api.router import router_table
 from orders.api.router import router_orders
+from payments.api.router import router_payments
 
 
 
@@ -52,7 +53,8 @@ urlpatterns = [
     path('api/', include(router_category.urls)),
     path('api/', include(router_product.urls)),
     path('api/', include(router_table.urls)),
-    path('api/', include(router_orders.urls))
+    path('api/', include(router_orders.urls)),
+    path('api/', include(router_payments.urls)),
 ]
 
 # suministro de las imagenes desde estatico desde settings
